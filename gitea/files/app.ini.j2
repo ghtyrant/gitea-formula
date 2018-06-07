@@ -95,3 +95,9 @@ COOKIE_REMEMBER_NAME = giteausersession
 [other]
 SHOW_FOOTER_BRANDING = {{ gitea.other.show_footer_branding }}
 SHOW_FOOTER_VERSION = {{ gitea.other.show_footer_version }}
+
+[cron.sync_external_users]
+; Synchronize external user data when starting server (default false)
+RUN_AT_START = false
+SCHEDULE = {{ gitea.cron_external_users.schedule }}
+UPDATE_EXISTING = {{ gitea.cron_external_users.update_existing }}

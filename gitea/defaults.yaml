@@ -58,3 +58,6 @@ gitea:
   other:
     show_footer_branding: true
     show_footer_version: true
+  sync_external_users:
+    schedule: @every 24h
+    update_existing: true

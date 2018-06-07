@@ -8,10 +8,8 @@ git:
     - system: True
     - home: /var/lib/gitea
     - shell: /usr/sbin/nologin
-    - require:
-      - group: git
-  group.present:
-    - system: True
+    - groups:
+      - git
   pkg.installed: []
 
 /var/lib/gitea/gitea:
