@@ -3,8 +3,14 @@
 
 {% from "gitea/map.jinja" import gitea with context %}
 
+git_group:
+  group.present:
+    - name: git
+    - system: True
+
 git:
   user.present:
+    - name: git
     - system: True
     - home: /var/lib/gitea
     - shell: /usr/sbin/nologin
